@@ -11,20 +11,32 @@
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
-        int cnt = 0;
-        ListNode* temp = head;
-        while(temp != nullptr){
-            cnt++;
-            temp = temp->next;
-        }
-        int midNode = (cnt/2) + 1;
-        temp = head;
+        // int cnt = 0;
+        // ListNode* temp = head;
+        // while(temp != nullptr){
+        //     cnt++;
+        //     temp = temp->next;
+        // }
+        // int midNode = (cnt/2) + 1;
+        // temp = head;
 
-        while(temp != nullptr){
-            midNode = midNode - 1;
-            if(midNode == 0) break;
-            temp = temp->next;
+        // while(temp != nullptr){
+        //     midNode = midNode - 1;
+        //     if(midNode == 0) break;
+        //     temp = temp->next;
+        // }
+        // return temp;
+
+
+        // Tortoise & snare method;
+
+        ListNode* slow = head;
+        ListNode* fast = head;
+
+        while(fast != NULL && fast->next != NULL){
+            slow = slow->next;
+            fast = fast->next->next;
         }
-        return temp;
+        return slow;
     }
 };
