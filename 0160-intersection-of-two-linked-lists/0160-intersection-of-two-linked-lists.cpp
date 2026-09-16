@@ -17,23 +17,23 @@ public:
         ListNode *ptrB = headB;
 
          while(ptrA != ptrB){
-        //     if(ptrA != nullptr){
-        //         ptrA = ptrA -> next;
-        //     }
-        //     else ptrA = headB;
+            if(ptrA != nullptr){
+                ptrA = ptrA -> next;
+            }
+            else ptrA = headB;
 
-        //     if(ptrB != nullptr){
-        //         ptrB = ptrB -> next;
-        //     }
-        //     else ptrB = headA;
+            if(ptrB != nullptr){
+                ptrB = ptrB -> next;
+            }
+            else ptrB = headA;
 
-            ptrA = ptrA->next;
-            ptrB = ptrB->next;
+            // ptrA = ptrA->next;
+            // ptrB = ptrB->next;
 
-            if(ptrA == ptrB) return ptrA;
+            // if(ptrA == ptrB) return ptrA;
 
-            if(ptrA == NULL) ptrA = headA;
-            if(ptrB == NULL) ptrB = headB;
+            // if(ptrA == NULL) ptrA = headA;
+            // if(ptrB == NULL) ptrB = headB;
          }
 
 
